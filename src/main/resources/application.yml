@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: strangler-demo
+
+server:
+  port: ${PORT:8080}
+
+# Configuration for the legacy system API (jsonplaceholder in this case)
+legacy:
+  api:
+    base-url: https://jsonplaceholder.typicode.com
+
+# Actuator endpoints for health checks
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
