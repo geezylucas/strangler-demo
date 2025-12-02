@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 env:
-  AZURE_CONTAINER_REGISTRY: <YOUR_ACR_NAME>  # e.g., mystranglerapp
+  AZURE_CONTAINER_REGISTRY: stranglerdemob0516181  # e.g., mystranglerapp
   IMAGE_NAME: strangler-demo
   CONTAINER_APP_NAME: strangler-demo-app
   RESOURCE_GROUP: strangler-demo-rg

@@ -27,7 +27,7 @@ public class UserController {
      */
     @GetMapping
     public ResponseEntity<List<User>> getAllUsers() {
-        log.info("GET /api/v1/users - Fetching all users");
+        log.info("GET /api/v1/users - Fetching all users (new feature)");
         List<User> users = userService.getAllUsers();
         return ResponseEntity.ok(users);
     }
@@ -38,7 +38,7 @@ public class UserController {
      */
     @GetMapping("/{id}")
     public ResponseEntity<User> getUserById(@PathVariable Long id) {
-        log.info("GET /api/v1/users/{} - Fetching user", id);
+        log.info("GET /api/v1/users/{} - Fetching user (missing feature flag)", id);
         User user = userService.getUserById(id);
         
         if (user == null) {
