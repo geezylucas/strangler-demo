@@ -26,7 +26,7 @@ public class UserController {
      * GET /api/v1/users
      */
     @GetMapping
-    public ResponseEntity<List<User>> getAllUsers() {
+    public ResponseEntity<List<User>> getUsers() {
         log.info("GET /api/v1/users - Fetching all users (new feature)");
         List<User> users = userService.getAllUsers();
         return ResponseEntity.ok(users);
